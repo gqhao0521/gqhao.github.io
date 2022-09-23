@@ -6,7 +6,7 @@
   <link href="http://www.glmapper.com/atom.xml" rel="self"/>
   
   <link href="http://www.glmapper.com/"/>
-  <updated>2022-05-25T14:16:17.361Z</updated>
+  <updated>2022-09-12T01:39:15.766Z</updated>
   <id>http://www.glmapper.com/</id>
   
   <author>
@@ -15,6 +15,134 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你知道 @Async 是怎么让方法异步执行的吗？</title>
+    <link href="http://www.glmapper.com/22022/09/12/springboot/spring-boot-async-anno/"/>
+    <id>http://www.glmapper.com/22022/09/12/springboot/spring-boot-async-anno/</id>
+    <published>+022022-09-12T01:05:44.000Z</published>
+    <updated>2022-09-12T01:39:15.766Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在阅读本文之前，你可以通过 &lt;a href=&quot;https://spring.io/guides/gs/async-method/&quot;&gt;Creating Asynchronous Methods&lt;/a&gt; 指导来体验下创建异步方法的使用方式。&lt;/p&gt;
+&lt;p&gt;为什么要写这篇文章，本质上对于这些 Spring 已经封装好的能力，并不需要去关注它底层到底是怎么玩的，比如 &lt;code&gt;@Async&lt;/code&gt;，你肯定可以猜到对于打了这个注解的方法（或者类），在执行这个方法（或者类下所有方法）时，Spring 框架会将当前方法丢进到一个单独的线程池中去执行，以达到方法异步执行的目的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="SpringBoot" scheme="http://www.glmapper.com/categories/SpringBoot/"/>
+    
+    
+    <category term="SpringBoot" scheme="http://www.glmapper.com/tags/SpringBoot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RocketMQ Push 消费模型</title>
+    <link href="http://www.glmapper.com/2022/09/22/mq/rocketmq/rocketmq-push-consumer-model/"/>
+    <id>http://www.glmapper.com/2022/09/22/mq/rocketmq/rocketmq-push-consumer-model/</id>
+    <published>2022-09-22T13:31:29.000Z</published>
+    <updated>2022-09-22T13:32:31.298Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Push 模式是指由 Server 端来控制消息的推送，即当有消息到 Server 之后，会将消息主动投递给 client(Consumer 端)。&lt;/p&gt;
+&lt;h2 id=&quot;使用-DefaultMQPushConsumer-消费消息&quot;&gt;&lt;a href=&quot;#使用-DefaultMQPushConsumer-消费消息&quot; class=&quot;headerlink&quot; title=&quot;使用 DefaultMQPushConsumer 消费消息&quot;&gt;&lt;/a&gt;使用 DefaultMQPushConsumer 消费消息&lt;/h2&gt;&lt;p&gt;下面是使用 DefaultMQPushConsumer 消费消息的官方示例代码：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="RocketMQ" scheme="http://www.glmapper.com/categories/RocketMQ/"/>
+    
+    
+    <category term="RocketMQ" scheme="http://www.glmapper.com/tags/RocketMQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RocketMQ 本地部署问题总结</title>
+    <link href="http://www.glmapper.com/2022/09/22/mq/rocketmq/rocketmq-deploy-issue/"/>
+    <id>http://www.glmapper.com/2022/09/22/mq/rocketmq/rocketmq-deploy-issue/</id>
+    <published>2022-09-22T13:29:02.000Z</published>
+    <updated>2022-09-22T13:32:35.514Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本篇分为 RocketMQ 部署和 RocketMQ-dashboard 部署两部分，主要是 RocketMQ 部署问题较多，汇总了下网上各路大神以及官方 issue 的讨论汇总而来。&lt;/p&gt;
+&lt;h2 id=&quot;RocketMQ-部署&quot;&gt;&lt;a href=&quot;#RocketMQ-部署&quot; class=&quot;headerlink&quot; title=&quot;RocketMQ 部署&quot;&gt;&lt;/a&gt;RocketMQ 部署&lt;/h2&gt;&lt;p&gt;根据官方的&lt;a href=&quot;https://rocketmq.apache.org/docs/%E4%BB%8B%E7%BB%8D/02quickstart&quot;&gt;快速开始&lt;/a&gt; 尝试在本地部署 RocketMQ；如果你是按照官方文档直接来搞，可能 90% 是不可能成功的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="RocketMQ" scheme="http://www.glmapper.com/categories/RocketMQ/"/>
+    
+    
+    <category term="RocketMQ" scheme="http://www.glmapper.com/tags/RocketMQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ab 测试</title>
+    <link href="http://www.glmapper.com/2022/09/22/tests/test-benchmark-ab/"/>
+    <id>http://www.glmapper.com/2022/09/22/tests/test-benchmark-ab/</id>
+    <published>2022-09-22T13:26:42.000Z</published>
+    <updated>2022-09-22T13:28:39.666Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Apache-Benchmark-Tool&quot;&gt;&lt;a href=&quot;#Apache-Benchmark-Tool&quot; class=&quot;headerlink&quot; title=&quot;Apache Benchmark Tool&quot;&gt;&lt;/a&gt;Apache Benchmark Tool&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;ab is a tool for benchmarking your Apache Hypertext Transfer Protocol (HTTP) server. It is designed to give you an impression of how your current Apache installation performs. This especially shows you how many requests per second your Apache installation is capable of serving.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ab 是 apache http server 基准测试工具，它可以帮助我们去了解当前服务的表现，如每秒请求数等。下面是 ab 对应的所有 options 摘要信息：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="test" scheme="http://www.glmapper.com/categories/test/"/>
+    
+    
+    <category term="test" scheme="http://www.glmapper.com/tags/test/"/>
+    
+    <category term="ab test" scheme="http://www.glmapper.com/tags/ab-test/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浅析 SOFA 注册中心数据同步</title>
+    <link href="http://www.glmapper.com/2022/09/12/sofa/sofa-registry-sync-data/"/>
+    <id>http://www.glmapper.com/2022/09/12/sofa/sofa-registry-sync-data/</id>
+    <published>2022-09-12T02:58:30.000Z</published>
+    <updated>2022-09-12T03:00:03.890Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本篇主要对 SOFARegistry 的数据同步模块进行解析，对于注册中心的概念以及 SOFARegistry 的基础架构不做过多阐述，相关介绍可以见&lt;a href=&quot;%5Bhttps://www.sofastack.tech/blog/sofa-registry-introduction/%5D(https://www.sofastack.tech/blog/sofa-registry-introduction/)&quot;&gt;海量数据下的注册中心 - SOFARegistry 架构介绍&lt;/a&gt; 这篇文章。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="SOFA" scheme="http://www.glmapper.com/categories/SOFA/"/>
+    
+    
+    <category term="分布式" scheme="http://www.glmapper.com/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+    
+    <category term="注册中心" scheme="http://www.glmapper.com/tags/%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>聊 一聊 maven 测试相关的插件</title>
+    <link href="http://www.glmapper.com/2022/07/31/maven/maven-plugin-about-test/"/>
+    <id>http://www.glmapper.com/2022/07/31/maven/maven-plugin-about-test/</id>
+    <published>2022-07-31T03:09:51.000Z</published>
+    <updated>2022-09-12T03:12:02.249Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在之前的 &lt;a href=&quot;https://juejin.cn/post/6919490393893502984&quot;&gt;聊一聊 maven 生命周期和 maven 插件编写&lt;/a&gt; 这篇文章中，简单聊了点maven 构建生命周期和如何编写一个 maven 插件。本篇文章从插件入手，来探讨下 maven 中那些于测试相关的插件，这些插件与工程师日常开发是密切相关的，可能很多情况下你不需要关注，因为已经有前辈帮你搞完了；“事不关己高高挂起” 与 “知其然知其所以然” 是两种不同的态度，对待技术，我建议是后者！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="maven" scheme="http://www.glmapper.com/categories/maven/"/>
+    
+    
+    <category term="maven" scheme="http://www.glmapper.com/tags/maven/"/>
+    
+    <category term="maven plugin" scheme="http://www.glmapper.com/tags/maven-plugin/"/>
+    
+    <category term="testing" scheme="http://www.glmapper.com/tags/testing/"/>
+    
+  </entry>
   
   <entry>
     <title>修改 YApi 的用户角色(添加管理员)</title>
@@ -344,151 +472,6 @@
     
     
     <category term="SOFA" scheme="http://www.glmapper.com/tags/SOFA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 docker 部署 kafka 集群</title>
-    <link href="http://www.glmapper.com/2021/07/23/docker/docker-compose-kakfa-install/"/>
-    <id>http://www.glmapper.com/2021/07/23/docker/docker-compose-kakfa-install/</id>
-    <published>2021-07-23T13:47:16.000Z</published>
-    <updated>2022-04-21T14:13:46.754Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;参考文档：&lt;a href=&quot;https://github.com/wurstmeister/kafka-docker&quot;&gt;https://github.com/wurstmeister/kafka-docker&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;在你的文件系统中找个目录，然后新建一个 docker-compose.yaml 文件&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;➜  kafka-guides &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;total 8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-rw-r--r--@ 1 sgl  staff   1.1K  7 13 21:56 docker-compose.yaml&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;编辑 docker-compose.yaml 文件&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="docker" scheme="http://www.glmapper.com/categories/docker/"/>
-    
-    
-    <category term="docker" scheme="http://www.glmapper.com/tags/docker/"/>
-    
-    <category term="kafka" scheme="http://www.glmapper.com/tags/kafka/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpringAop 代理模式及 AopContext 问题小记</title>
-    <link href="http://www.glmapper.com/2021/07/17/spring/spring-proxy-aopcontext/"/>
-    <id>http://www.glmapper.com/2021/07/17/spring/spring-proxy-aopcontext/</id>
-    <published>2021-07-17T08:17:04.000Z</published>
-    <updated>2022-04-21T10:18:33.012Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;AOP 称为面向切面编程，其底层原理就是动态代理；JAVA 中比较常见的动态代理有两种，分别是 JDK 动态代理和 CGLIB 动态代理，这点从 Spring Aop 的 AopProxy 的实现就可以得出验证。&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;AopProxy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    --- JdkDynamicAopProxy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    --- CglibAopProxy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;Spring 作为 Java 应用领域最牛 X 的基础框架产品，在对于一些版本变更导致的兼容性问题的处理上一直被诟病，对于这两种代理方式的选择上，Spring 不同版本存在一定的差异，这也是本文产生的一个原因。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="spring" scheme="http://www.glmapper.com/categories/spring/"/>
-    
-    
-    <category term="aop" scheme="http://www.glmapper.com/tags/aop/"/>
-    
-    <category term="spring" scheme="http://www.glmapper.com/tags/spring/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>你知道 Junit 是怎么跑的吗？</title>
-    <link href="http://www.glmapper.com/2021/07/02/tests/test-junit-run-principle/"/>
-    <id>http://www.glmapper.com/2021/07/02/tests/test-junit-run-principle/</id>
-    <published>2021-07-02T13:47:16.000Z</published>
-    <updated>2022-04-24T03:07:40.745Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Junit 是由 Kent Beck 和 Erich Gamma 于 1995 年底着手编写的框架，自此以后，Junit 框架日益普及，现在已经成为单元测试 Java 应用程序的事实上的标准。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在软件开发领域中，从来没有这样的事情：少数几行代码对大量代码起着如此重要的作用 — Martin Fowler&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="test" scheme="http://www.glmapper.com/categories/test/"/>
-    
-    
-    <category term="test" scheme="http://www.glmapper.com/tags/test/"/>
-    
-    <category term="junit" scheme="http://www.glmapper.com/tags/junit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test-test-double</title>
-    <link href="http://www.glmapper.com/2021/06/01/tests/test-test-double/"/>
-    <id>http://www.glmapper.com/2021/06/01/tests/test-test-double/</id>
-    <published>2021-06-01T03:07:53.000Z</published>
-    <updated>2022-04-24T03:09:10.406Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;TestDouble 简单理解就是测试替身，在多数情况下，我们的系统能够正常运行，不仅仅依托系统本身，还需要依赖一些外部服务，比如其他系统提供的 http、rpc 服务，系统自身以来的像 redis 缓存服务或者 mysql 这类数据库服务。在微服务场景下，业务按照业务领域将一个系统拆分为多个系统，系统之间的交互不仅仅是简单的 A-&amp;gt;B，可能是 A -&amp;gt;B -&amp;gt; C -&amp;gt;D，对于编写单元测试的开发者来说，当我需要编写系统A 的测试用例时，不可能去构建完整的调用链路，那么在测试工程中，通常会以 “测试替身” 来解决外部依赖所带来的测试复杂性问题。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="test" scheme="http://www.glmapper.com/categories/test/"/>
-    
-    
-    <category term="test" scheme="http://www.glmapper.com/tags/test/"/>
-    
-    <category term="TestDouble" scheme="http://www.glmapper.com/tags/TestDouble/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>聊一聊 maven 生命周期和 maven 插件编写</title>
-    <link href="http://www.glmapper.com/2021/01/19/maven/maven-plugin-lifecycle-program/"/>
-    <id>http://www.glmapper.com/2021/01/19/maven/maven-plugin-lifecycle-program/</id>
-    <published>2021-01-19T03:05:33.000Z</published>
-    <updated>2022-04-24T03:07:03.106Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;原文：&lt;a href=&quot;https://juejin.cn/post/6919490393893502984&quot;&gt;https://juejin.cn/post/6919490393893502984&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;最近接到一个业务同学的诉求：用户会在他们大数据平台新建很多模型表，但是再编写业务代码时，需要手动的去创建和模型表对应的 DO 类，那对于有少量表的情况还可以接受，但是对于十几张甚至几十张表的情况，就会很头疼。&lt;/p&gt;
-&lt;p&gt;我们知道 mybatis 实际上是有提供类似插件工具（mybatis-generator）的，社区也有非常多类似的代码生成工具，但是受限于一些情况，没有办法采用它们，那最简单的就是自己写个插件来完成这种工作量大且重复性高的事情。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="maven" scheme="http://www.glmapper.com/categories/maven/"/>
-    
-    
-    <category term="maven" scheme="http://www.glmapper.com/tags/maven/"/>
-    
-    <category term="maven plugin" scheme="http://www.glmapper.com/tags/maven-plugin/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>启动一个没有 main 函数的 java 程序</title>
-    <link href="http://www.glmapper.com/2021/01/17/java/java-base-non-main/"/>
-    <id>http://www.glmapper.com/2021/01/17/java/java-base-non-main/</id>
-    <published>2021-01-17T03:01:11.000Z</published>
-    <updated>2022-04-24T03:04:29.286Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;原文：&lt;a href=&quot;https://juejin.cn/post/6918637397857009677&quot;&gt;https://juejin.cn/post/6918637397857009677&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;作为一名 &lt;code&gt;JAVA&lt;/code&gt; 开发者，不知道大家有没有去想过，&lt;code&gt;JAVA&lt;/code&gt;  程序为什么一定要从 main 函数执行开始，其实关于这个话题，我大概从网上搜了下，其实不乏有 &lt;strong&gt;main 方法是我们学习Java语言学习的第一个方法，也是每个 java 使用者最熟悉的方法, 每个 Java 应用程序都必须有且仅有一个 main 方法&lt;/strong&gt; 这种说法。那么真的是这样吗？今天就来聊聊这个事情。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JAVA" scheme="http://www.glmapper.com/categories/JAVA/"/>
-    
-    
-    <category term="java" scheme="http://www.glmapper.com/tags/java/"/>
-    
-    <category term="FX Application" scheme="http://www.glmapper.com/tags/FX-Application/"/>
     
   </entry>
   
