@@ -37,6 +37,31 @@
   </entry>
   
   <entry>
+    <title>Mysql - 从一个小 case 理解 MVCC</title>
+    <link href="http://www.glmapper.com/2022/11/12/db/mysql-transaction-mvcc-case/"/>
+    <id>http://www.glmapper.com/2022/11/12/db/mysql-transaction-mvcc-case/</id>
+    <published>2022-11-12T03:23:22.000Z</published>
+    <updated>2022-11-12T03:27:04.772Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;原文链接： &lt;a href=&quot;https://juejin.cn/post/7163934829984088095&quot;&gt;https://juejin.cn/post/7163934829984088095&lt;/a&gt; &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;从-innoDB-的一致性非锁定读说起&quot;&gt;&lt;a href=&quot;#从-innoDB-的一致性非锁定读说起&quot; class=&quot;headerlink&quot; title=&quot;从 innoDB 的一致性非锁定读说起&quot;&gt;&lt;/a&gt;从 innoDB 的一致性非锁定读说起&lt;/h2&gt;&lt;h3 id=&quot;非锁定读和行快照数据&quot;&gt;&lt;a href=&quot;#非锁定读和行快照数据&quot; class=&quot;headerlink&quot; title=&quot;非锁定读和行快照数据&quot;&gt;&lt;/a&gt;非锁定读和行快照数据&lt;/h3&gt;&lt;p&gt;一致性的非锁定读（consistent nonlocking read）是指 InnoDB 存储引擎通过行多版本控制（multi versioning）的方式来读取当前执行时间数据库中行的数据。如果读取的行正在执行 DELETE 或 UPDATE 操作，这时读取操作不会因此去等待行上锁的释放。相反地，&lt;strong&gt;InnoDB 存储引擎会去读取行的一个快照数据&lt;/strong&gt;，下图是关于快照数据的一个简单示图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ddcbc6d689cf4d6fb251f29aedf8df34~tplv-k3u1fbpfcp-zoom-1.image&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="数据库" scheme="http://www.glmapper.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="mysql" scheme="http://www.glmapper.com/tags/mysql/"/>
+    
+    <category term="mvcc" scheme="http://www.glmapper.com/tags/mvcc/"/>
+    
+  </entry>
+  
+  <entry>
     <title>RocketMQ Push 消费模型</title>
     <link href="http://www.glmapper.com/2022/09/22/mq/rocketmq/rocketmq-push-consumer-model/"/>
     <id>http://www.glmapper.com/2022/09/22/mq/rocketmq/rocketmq-push-consumer-model/</id>
@@ -452,26 +477,6 @@
     <category term="log" scheme="http://www.glmapper.com/tags/log/"/>
     
     <category term="gc" scheme="http://www.glmapper.com/tags/gc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记：SOFA Meepup 合肥站-SOFA 微服务体系技术生态于实践</title>
-    <link href="http://www.glmapper.com/2021/07/25/share/shares-sofa-meetup-7/"/>
-    <id>http://www.glmapper.com/2021/07/25/share/shares-sofa-meetup-7/</id>
-    <published>2021-07-25T08:06:55.000Z</published>
-    <updated>2022-04-23T07:07:47.288Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;SOFA Meepup 合肥站从 5 月份开始筹划，至 7.24 在合肥成功举办，历时 2 个多月的时间，从到场人数来看，并没有受到大雨的影响，合肥开发者同学对于技术的热衷没有我们预想的那么佛系，尤其是在微服务领域。在线观看人数也大于预测，这对于所有参与组织活动的同学及给予大力支持的社区来说，都是极大的鼓励和反馈。&lt;/p&gt;
-&lt;p&gt;点点滴滴，希望以文字的形式记录下来，记录这次活动之旅。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="experience" scheme="http://www.glmapper.com/categories/experience/"/>
-    
-    
-    <category term="SOFA" scheme="http://www.glmapper.com/tags/SOFA/"/>
     
   </entry>
   
