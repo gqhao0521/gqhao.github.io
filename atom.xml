@@ -6,7 +6,7 @@
   <link href="http://www.glmapper.com/atom.xml" rel="self"/>
   
   <link href="http://www.glmapper.com/"/>
-  <updated>2022-09-12T01:39:15.766Z</updated>
+  <updated>2022-11-12T03:27:04.772Z</updated>
   <id>http://www.glmapper.com/</id>
   
   <author>
@@ -15,26 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>你知道 @Async 是怎么让方法异步执行的吗？</title>
-    <link href="http://www.glmapper.com/22022/09/12/springboot/spring-boot-async-anno/"/>
-    <id>http://www.glmapper.com/22022/09/12/springboot/spring-boot-async-anno/</id>
-    <published>+022022-09-12T01:05:44.000Z</published>
-    <updated>2022-09-12T01:39:15.766Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;在阅读本文之前，你可以通过 &lt;a href=&quot;https://spring.io/guides/gs/async-method/&quot;&gt;Creating Asynchronous Methods&lt;/a&gt; 指导来体验下创建异步方法的使用方式。&lt;/p&gt;
-&lt;p&gt;为什么要写这篇文章，本质上对于这些 Spring 已经封装好的能力，并不需要去关注它底层到底是怎么玩的，比如 &lt;code&gt;@Async&lt;/code&gt;，你肯定可以猜到对于打了这个注解的方法（或者类），在执行这个方法（或者类下所有方法）时，Spring 框架会将当前方法丢进到一个单独的线程池中去执行，以达到方法异步执行的目的。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="SpringBoot" scheme="http://www.glmapper.com/categories/SpringBoot/"/>
-    
-    
-    <category term="SpringBoot" scheme="http://www.glmapper.com/tags/SpringBoot/"/>
-    
-  </entry>
   
   <entry>
     <title>Mysql - 从一个小 case 理解 MVCC</title>
@@ -143,6 +123,26 @@
     <category term="分布式" scheme="http://www.glmapper.com/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
     
     <category term="注册中心" scheme="http://www.glmapper.com/tags/%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你知道 @Async 是怎么让方法异步执行的吗？</title>
+    <link href="http://www.glmapper.com/2022/09/12/springboot/spring-boot-async-anno/"/>
+    <id>http://www.glmapper.com/2022/09/12/springboot/spring-boot-async-anno/</id>
+    <published>2022-09-12T01:05:44.000Z</published>
+    <updated>2022-11-12T03:28:57.408Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在阅读本文之前，你可以通过 &lt;a href=&quot;https://spring.io/guides/gs/async-method/&quot;&gt;Creating Asynchronous Methods&lt;/a&gt; 指导来体验下创建异步方法的使用方式。&lt;/p&gt;
+&lt;p&gt;为什么要写这篇文章，本质上对于这些 Spring 已经封装好的能力，并不需要去关注它底层到底是怎么玩的，比如 &lt;code&gt;@Async&lt;/code&gt;，你肯定可以猜到对于打了这个注解的方法（或者类），在执行这个方法（或者类下所有方法）时，Spring 框架会将当前方法丢进到一个单独的线程池中去执行，以达到方法异步执行的目的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="SpringBoot" scheme="http://www.glmapper.com/categories/SpringBoot/"/>
+    
+    
+    <category term="SpringBoot" scheme="http://www.glmapper.com/tags/SpringBoot/"/>
     
   </entry>
   
