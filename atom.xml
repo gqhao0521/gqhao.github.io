@@ -6,7 +6,7 @@
   <link href="http://www.glmapper.com/atom.xml" rel="self"/>
   
   <link href="http://www.glmapper.com/"/>
-  <updated>2022-11-12T03:27:04.772Z</updated>
+  <updated>2022-12-04T07:47:18.415Z</updated>
   <id>http://www.glmapper.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>New Features Of JDK - JDK9 Modular System</title>
+    <link href="http://www.glmapper.com/2022/12/04/java/java-open-jdk9-module/"/>
+    <id>http://www.glmapper.com/2022/12/04/java/java-open-jdk9-module/</id>
+    <published>2022-12-04T07:45:44.000Z</published>
+    <updated>2022-12-04T07:47:18.415Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Modular System 是 JAVA9 中提供的新特性，它从一个独立的开源项目而来，名为 &lt;a href=&quot;https://openjdk.org/projects/jigsaw/&quot;&gt;Jigsaw Project&lt;/a&gt;。在此之前，我们对于 Java 技术栈中模块化的认知是基于 OSGI 的，实际上 OSGI 也确实形成了它自己独有的体系，并且是一定程度上的行业标准。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JAVA" scheme="http://www.glmapper.com/categories/JAVA/"/>
+    
+    
+    <category term="openjdk" scheme="http://www.glmapper.com/tags/openjdk/"/>
+    
+  </entry>
   
   <entry>
     <title>Mysql - 从一个小 case 理解 MVCC</title>
@@ -448,33 +467,6 @@
     <category term="SOFAArk" scheme="http://www.glmapper.com/tags/SOFAArk/"/>
     
     <category term="ClassLoader" scheme="http://www.glmapper.com/tags/ClassLoader/"/>
-    
-    <category term="gc" scheme="http://www.glmapper.com/tags/gc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>log4j2 日志 PatternLayout 配置对 SOFAArk PluginClassLoader 的影响</title>
-    <link href="http://www.glmapper.com/2021/11/01/sofa/sofa-ark-plugin-classloader-log4j/"/>
-    <id>http://www.glmapper.com/2021/11/01/sofa/sofa-ark-plugin-classloader-log4j/</id>
-    <published>2021-11-01T03:10:19.000Z</published>
-    <updated>2022-04-24T03:25:15.660Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;log4j2 相关类在 sofaark 插件中是导出的，因此当出现 log4j2 的类需要被加载时，会委托给 PluginClassLoader 进行加载。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="SOFA" scheme="http://www.glmapper.com/categories/SOFA/"/>
-    
-    
-    <category term="SOFAArk" scheme="http://www.glmapper.com/tags/SOFAArk/"/>
-    
-    <category term="ClassLoader" scheme="http://www.glmapper.com/tags/ClassLoader/"/>
-    
-    <category term="类加载" scheme="http://www.glmapper.com/tags/%E7%B1%BB%E5%8A%A0%E8%BD%BD/"/>
-    
-    <category term="log" scheme="http://www.glmapper.com/tags/log/"/>
     
     <category term="gc" scheme="http://www.glmapper.com/tags/gc/"/>
     
