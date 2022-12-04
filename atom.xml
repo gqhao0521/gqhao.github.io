@@ -6,7 +6,7 @@
   <link href="http://www.glmapper.com/atom.xml" rel="self"/>
   
   <link href="http://www.glmapper.com/"/>
-  <updated>2022-12-04T07:47:18.415Z</updated>
+  <updated>2022-12-04T07:52:00.244Z</updated>
   <id>http://www.glmapper.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>K8S system OOM 和资源配置实践</title>
+    <link href="http://www.glmapper.com/2022/12/04/solutions/solution-series-k8s-resources-request-limit/"/>
+    <id>http://www.glmapper.com/2022/12/04/solutions/solution-series-k8s-resources-request-limit/</id>
+    <published>2022-12-04T07:49:37.000Z</published>
+    <updated>2022-12-04T07:52:00.244Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;我们目前服务是托管在 Aws K8S 的，近期出现了一次由于生产环境流量增大而导致的 system OOM 问题，进而导致了部分核心业务受损。在此之前，团队并没有思考过关于 K8S 资源配置上存在的一些问题，也没有按照业务自身情况使用对应的 QoS 类，从而导致了故障的产生。&lt;/p&gt;
+&lt;p&gt;本文将从这个角度切入，对 K8s 中的资源属性以及 QoS 进行介绍，最后给出生产环境使用的一些建议。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="解决方案" scheme="http://www.glmapper.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    
+    
+    <category term="kubernetes" scheme="http://www.glmapper.com/tags/kubernetes/"/>
+    
+  </entry>
   
   <entry>
     <title>New Features Of JDK - JDK9 Modular System</title>
@@ -446,29 +466,6 @@
     <category term="jvm" scheme="http://www.glmapper.com/tags/jvm/"/>
     
     <category term="oop-klass" scheme="http://www.glmapper.com/tags/oop-klass/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>finalize 方法重写对 GC 的影响分析</title>
-    <link href="http://www.glmapper.com/2021/11/02/java/java-advance-gc-finalize/"/>
-    <id>http://www.glmapper.com/2021/11/02/java/java-advance-gc-finalize/</id>
-    <published>2021-11-02T03:17:56.000Z</published>
-    <updated>2022-04-24T03:21:21.447Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;关于 Object 的 finalize 方法，在日常开发中可能有超过 99% 的人都没有关注过，因为业务开发很少有重写 finalize 方法的场景；开发者对于 finalize 的认知大多在是“面试八股文”中，而且也不乏见到将 finalize、finally 以及 final 放在一块比较的 case，面试官可能是出于对初学者 java 基本语言知识的考量，但是这真的有意义吗？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="SOFA" scheme="http://www.glmapper.com/categories/SOFA/"/>
-    
-    
-    <category term="SOFAArk" scheme="http://www.glmapper.com/tags/SOFAArk/"/>
-    
-    <category term="ClassLoader" scheme="http://www.glmapper.com/tags/ClassLoader/"/>
-    
-    <category term="gc" scheme="http://www.glmapper.com/tags/gc/"/>
     
   </entry>
   
