@@ -6,7 +6,7 @@
   <link href="http://www.glmapper.com/atom.xml" rel="self"/>
   
   <link href="http://www.glmapper.com/"/>
-  <updated>2022-09-12T01:39:15.766Z</updated>
+  <updated>2022-12-04T07:52:00.244Z</updated>
   <id>http://www.glmapper.com/</id>
   
   <author>
@@ -17,22 +17,66 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>你知道 @Async 是怎么让方法异步执行的吗？</title>
-    <link href="http://www.glmapper.com/22022/09/12/springboot/spring-boot-async-anno/"/>
-    <id>http://www.glmapper.com/22022/09/12/springboot/spring-boot-async-anno/</id>
-    <published>+022022-09-12T01:05:44.000Z</published>
-    <updated>2022-09-12T01:39:15.766Z</updated>
+    <title>K8S system OOM 和资源配置实践</title>
+    <link href="http://www.glmapper.com/2022/12/04/solutions/solution-series-k8s-resources-request-limit/"/>
+    <id>http://www.glmapper.com/2022/12/04/solutions/solution-series-k8s-resources-request-limit/</id>
+    <published>2022-12-04T07:49:37.000Z</published>
+    <updated>2022-12-04T07:52:00.244Z</updated>
     
     
-    <summary type="html">&lt;p&gt;在阅读本文之前，你可以通过 &lt;a href=&quot;https://spring.io/guides/gs/async-method/&quot;&gt;Creating Asynchronous Methods&lt;/a&gt; 指导来体验下创建异步方法的使用方式。&lt;/p&gt;
-&lt;p&gt;为什么要写这篇文章，本质上对于这些 Spring 已经封装好的能力，并不需要去关注它底层到底是怎么玩的，比如 &lt;code&gt;@Async&lt;/code&gt;，你肯定可以猜到对于打了这个注解的方法（或者类），在执行这个方法（或者类下所有方法）时，Spring 框架会将当前方法丢进到一个单独的线程池中去执行，以达到方法异步执行的目的。&lt;/p&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;我们目前服务是托管在 Aws K8S 的，近期出现了一次由于生产环境流量增大而导致的 system OOM 问题，进而导致了部分核心业务受损。在此之前，团队并没有思考过关于 K8S 资源配置上存在的一些问题，也没有按照业务自身情况使用对应的 QoS 类，从而导致了故障的产生。&lt;/p&gt;
+&lt;p&gt;本文将从这个角度切入，对 K8s 中的资源属性以及 QoS 进行介绍，最后给出生产环境使用的一些建议。&lt;/p&gt;</summary>
     
     
     
-    <category term="SpringBoot" scheme="http://www.glmapper.com/categories/SpringBoot/"/>
+    <category term="解决方案" scheme="http://www.glmapper.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     
     
-    <category term="SpringBoot" scheme="http://www.glmapper.com/tags/SpringBoot/"/>
+    <category term="kubernetes" scheme="http://www.glmapper.com/tags/kubernetes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>New Features Of JDK - JDK9 Modular System</title>
+    <link href="http://www.glmapper.com/2022/12/04/java/java-open-jdk9-module/"/>
+    <id>http://www.glmapper.com/2022/12/04/java/java-open-jdk9-module/</id>
+    <published>2022-12-04T07:45:44.000Z</published>
+    <updated>2022-12-04T07:47:18.415Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Modular System 是 JAVA9 中提供的新特性，它从一个独立的开源项目而来，名为 &lt;a href=&quot;https://openjdk.org/projects/jigsaw/&quot;&gt;Jigsaw Project&lt;/a&gt;。在此之前，我们对于 Java 技术栈中模块化的认知是基于 OSGI 的，实际上 OSGI 也确实形成了它自己独有的体系，并且是一定程度上的行业标准。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JAVA" scheme="http://www.glmapper.com/categories/JAVA/"/>
+    
+    
+    <category term="openjdk" scheme="http://www.glmapper.com/tags/openjdk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mysql - 从一个小 case 理解 MVCC</title>
+    <link href="http://www.glmapper.com/2022/11/12/db/mysql-transaction-mvcc-case/"/>
+    <id>http://www.glmapper.com/2022/11/12/db/mysql-transaction-mvcc-case/</id>
+    <published>2022-11-12T03:23:22.000Z</published>
+    <updated>2022-11-12T03:27:04.772Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;原文链接： &lt;a href=&quot;https://juejin.cn/post/7163934829984088095&quot;&gt;https://juejin.cn/post/7163934829984088095&lt;/a&gt; &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;从-innoDB-的一致性非锁定读说起&quot;&gt;&lt;a href=&quot;#从-innoDB-的一致性非锁定读说起&quot; class=&quot;headerlink&quot; title=&quot;从 innoDB 的一致性非锁定读说起&quot;&gt;&lt;/a&gt;从 innoDB 的一致性非锁定读说起&lt;/h2&gt;&lt;h3 id=&quot;非锁定读和行快照数据&quot;&gt;&lt;a href=&quot;#非锁定读和行快照数据&quot; class=&quot;headerlink&quot; title=&quot;非锁定读和行快照数据&quot;&gt;&lt;/a&gt;非锁定读和行快照数据&lt;/h3&gt;&lt;p&gt;一致性的非锁定读（consistent nonlocking read）是指 InnoDB 存储引擎通过行多版本控制（multi versioning）的方式来读取当前执行时间数据库中行的数据。如果读取的行正在执行 DELETE 或 UPDATE 操作，这时读取操作不会因此去等待行上锁的释放。相反地，&lt;strong&gt;InnoDB 存储引擎会去读取行的一个快照数据&lt;/strong&gt;，下图是关于快照数据的一个简单示图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ddcbc6d689cf4d6fb251f29aedf8df34~tplv-k3u1fbpfcp-zoom-1.image&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="数据库" scheme="http://www.glmapper.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="mysql" scheme="http://www.glmapper.com/tags/mysql/"/>
+    
+    <category term="mvcc" scheme="http://www.glmapper.com/tags/mvcc/"/>
     
   </entry>
   
@@ -118,6 +162,26 @@
     <category term="分布式" scheme="http://www.glmapper.com/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
     
     <category term="注册中心" scheme="http://www.glmapper.com/tags/%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你知道 @Async 是怎么让方法异步执行的吗？</title>
+    <link href="http://www.glmapper.com/2022/09/12/springboot/spring-boot-async-anno/"/>
+    <id>http://www.glmapper.com/2022/09/12/springboot/spring-boot-async-anno/</id>
+    <published>2022-09-12T01:05:44.000Z</published>
+    <updated>2022-11-12T03:28:57.408Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在阅读本文之前，你可以通过 &lt;a href=&quot;https://spring.io/guides/gs/async-method/&quot;&gt;Creating Asynchronous Methods&lt;/a&gt; 指导来体验下创建异步方法的使用方式。&lt;/p&gt;
+&lt;p&gt;为什么要写这篇文章，本质上对于这些 Spring 已经封装好的能力，并不需要去关注它底层到底是怎么玩的，比如 &lt;code&gt;@Async&lt;/code&gt;，你肯定可以猜到对于打了这个注解的方法（或者类），在执行这个方法（或者类下所有方法）时，Spring 框架会将当前方法丢进到一个单独的线程池中去执行，以达到方法异步执行的目的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="SpringBoot" scheme="http://www.glmapper.com/categories/SpringBoot/"/>
+    
+    
+    <category term="SpringBoot" scheme="http://www.glmapper.com/tags/SpringBoot/"/>
     
   </entry>
   
@@ -402,76 +466,6 @@
     <category term="jvm" scheme="http://www.glmapper.com/tags/jvm/"/>
     
     <category term="oop-klass" scheme="http://www.glmapper.com/tags/oop-klass/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>finalize 方法重写对 GC 的影响分析</title>
-    <link href="http://www.glmapper.com/2021/11/02/java/java-advance-gc-finalize/"/>
-    <id>http://www.glmapper.com/2021/11/02/java/java-advance-gc-finalize/</id>
-    <published>2021-11-02T03:17:56.000Z</published>
-    <updated>2022-04-24T03:21:21.447Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;关于 Object 的 finalize 方法，在日常开发中可能有超过 99% 的人都没有关注过，因为业务开发很少有重写 finalize 方法的场景；开发者对于 finalize 的认知大多在是“面试八股文”中，而且也不乏见到将 finalize、finally 以及 final 放在一块比较的 case，面试官可能是出于对初学者 java 基本语言知识的考量，但是这真的有意义吗？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="SOFA" scheme="http://www.glmapper.com/categories/SOFA/"/>
-    
-    
-    <category term="SOFAArk" scheme="http://www.glmapper.com/tags/SOFAArk/"/>
-    
-    <category term="ClassLoader" scheme="http://www.glmapper.com/tags/ClassLoader/"/>
-    
-    <category term="gc" scheme="http://www.glmapper.com/tags/gc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>log4j2 日志 PatternLayout 配置对 SOFAArk PluginClassLoader 的影响</title>
-    <link href="http://www.glmapper.com/2021/11/01/sofa/sofa-ark-plugin-classloader-log4j/"/>
-    <id>http://www.glmapper.com/2021/11/01/sofa/sofa-ark-plugin-classloader-log4j/</id>
-    <published>2021-11-01T03:10:19.000Z</published>
-    <updated>2022-04-24T03:25:15.660Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;log4j2 相关类在 sofaark 插件中是导出的，因此当出现 log4j2 的类需要被加载时，会委托给 PluginClassLoader 进行加载。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="SOFA" scheme="http://www.glmapper.com/categories/SOFA/"/>
-    
-    
-    <category term="SOFAArk" scheme="http://www.glmapper.com/tags/SOFAArk/"/>
-    
-    <category term="ClassLoader" scheme="http://www.glmapper.com/tags/ClassLoader/"/>
-    
-    <category term="类加载" scheme="http://www.glmapper.com/tags/%E7%B1%BB%E5%8A%A0%E8%BD%BD/"/>
-    
-    <category term="log" scheme="http://www.glmapper.com/tags/log/"/>
-    
-    <category term="gc" scheme="http://www.glmapper.com/tags/gc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记：SOFA Meepup 合肥站-SOFA 微服务体系技术生态于实践</title>
-    <link href="http://www.glmapper.com/2021/07/25/share/shares-sofa-meetup-7/"/>
-    <id>http://www.glmapper.com/2021/07/25/share/shares-sofa-meetup-7/</id>
-    <published>2021-07-25T08:06:55.000Z</published>
-    <updated>2022-04-23T07:07:47.288Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;SOFA Meepup 合肥站从 5 月份开始筹划，至 7.24 在合肥成功举办，历时 2 个多月的时间，从到场人数来看，并没有受到大雨的影响，合肥开发者同学对于技术的热衷没有我们预想的那么佛系，尤其是在微服务领域。在线观看人数也大于预测，这对于所有参与组织活动的同学及给予大力支持的社区来说，都是极大的鼓励和反馈。&lt;/p&gt;
-&lt;p&gt;点点滴滴，希望以文字的形式记录下来，记录这次活动之旅。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="experience" scheme="http://www.glmapper.com/categories/experience/"/>
-    
-    
-    <category term="SOFA" scheme="http://www.glmapper.com/tags/SOFA/"/>
     
   </entry>
   
